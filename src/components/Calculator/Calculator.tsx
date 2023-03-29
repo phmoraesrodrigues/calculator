@@ -16,6 +16,8 @@ const operations = {
 
 type Operation = keyof typeof operations;
 
+const maxNumberLength = 8;
+
 const Calculator: React.FC = () => {
   const [display, setDisplay] = useState<string>("0");
   const [memory, setMemory] = useState<string | null>(null);
@@ -45,6 +47,10 @@ const Calculator: React.FC = () => {
   };
 
   const handleDigit = (digit: string) => {
+    if (display.length >= maxNumberLength) {
+      return;
+    }
+
     setDisplay((display) => {
       return (display === "0" ? "" : display) + digit;
     });
@@ -58,9 +64,7 @@ const Calculator: React.FC = () => {
 
   return (
     <div className="bg-black w-80 px-3 py-10">
-      <div className="m-4 mt-24 text-5xl overflow-hidden text-right">
-        {display}
-      </div>
+      <div className="m-4 mt-24 text-5xl text-right break-all">{display}</div>
       <div className="grid grid-rows-5 grid-flow-col gap-2">
         <div className="col-span-3">
           <div className="grid grid-cols-3 gap-2 place-content-center">
