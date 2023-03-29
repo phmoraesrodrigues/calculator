@@ -8,7 +8,7 @@ const variants = {
     text: "neutral-50",
   },
   colored: {
-    background: "neutral-400",
+    background: "amber-500",
     text: "neutral-50",
   },
 };
@@ -16,7 +16,7 @@ const variants = {
 interface ButtonProps {
   variant: keyof typeof variants;
   label: string;
-  onClick: () => void;
+  onClick?: () => void;
   extended?: boolean;
 }
 
