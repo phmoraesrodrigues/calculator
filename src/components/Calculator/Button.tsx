@@ -1,15 +1,15 @@
 const variants = {
   light: {
-    background: "neutral-400",
-    text: "neutral-950",
+    background: "bg-neutral-400",
+    text: "text-neutral-950",
   },
   dark: {
-    background: "neutral-700",
-    text: "neutral-50",
+    background: "bg-neutral-700",
+    text: "text-neutral-50",
   },
   colored: {
-    background: "amber-500",
-    text: "neutral-50",
+    background: "bg-amber-500",
+    text: "text-neutral-50",
   },
 };
 
@@ -28,7 +28,7 @@ const Button = (props: ButtonProps) => {
 
   return (
     <button
-      className={`rounded-full h-16 text-2xl bg-${background} text-${text} ${extendedClass}`}
+      className={`rounded-full h-16 text-2xl ${background} ${text} ${extendedClass}`}
       onClick={onClick}
     >
       {label}
