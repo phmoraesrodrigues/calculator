@@ -1,4 +1,21 @@
-# Getting Started with Create React App
+# Calculator
+
+## Description
+
+Implementation of the basic math operations: addition, subtraction, multiplication, and division,
+based on the iPhone calculator design.
+
+## Improvements
+
+- The calculator is not stacking operations, so if the user types 3 + 5 + 3, it will ignore the first operation and execute only the last one (the result, in this case, will be _8_);
+- After hitting _equal_ if the user starts clicking on digits again it is concatenating the value on the display. The correct is clear the last number and starts again;
+- Implement the signal swapping;
+- Implement the percentage operation;
+- Reduce the number when it grows to fit all the digits in one line;
+- Implement more validations (I added a limit to 8 digits in a number to simplify the possible errors related to big integers);
+- Handle huge numbers operations (the real calculator uses the scientific number [eg. _1e75_] to display those values);
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
